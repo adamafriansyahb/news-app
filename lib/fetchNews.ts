@@ -3,8 +3,8 @@ import { sortNewsByImage } from './utils';
 
 const fetchNews = async (
   category?: Category | string,
-  isDynamic?: boolean,
-  keywords?: string
+  keywords?: string,
+  isDynamic?: boolean
 ) => {
   // Graphql query
   const query = gql`

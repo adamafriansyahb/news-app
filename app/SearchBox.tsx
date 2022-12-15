@@ -12,7 +12,7 @@ const SearchBox = (props: Props) => {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input) return;
-    router.push(`/search?${input}`);
+    router.push(`/search?term=${input}`);
   };
 
   return (
