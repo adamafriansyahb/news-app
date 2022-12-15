@@ -5,7 +5,7 @@ type Props = {
   searchParams?: { term: string };
 };
 
-const page = async ({ searchParams }: Props) => {
+const SearchPage = async ({ searchParams }: Props) => {
   const news: NewsResponse = await fetchNews(
     'general',
     searchParams?.term,
@@ -20,4 +20,4 @@ const page = async ({ searchParams }: Props) => {
   );
 };
 
-export default page;
+export default SearchPage;
