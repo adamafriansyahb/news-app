@@ -17,7 +17,7 @@ const SearchBox = (props: Props) => {
 
   return (
     <form
-      className="max-w-6xl mx-auto flex justify-between items-center px-5"
+      className="max-w-6xl mx-auto flex justify-between items-center px-5 pb-5"
       onSubmit={handleSearch}
     >
       <input

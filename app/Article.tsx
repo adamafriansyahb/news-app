@@ -1,3 +1,5 @@
+import ReadMoreButton from './ReadMoreButton';
+
 type Props = {
   article: Article;
 };
@@ -5,14 +7,15 @@ type Props = {
 const Article = ({ article }: Props) => {
   return (
     <article className="bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out">
-      {article.image && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={article.image}
-          alt={article.title}
-          className="h-56 w-full object-cover rounded-t-lg shadow-md"
-        />
-      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={
+          article.image ||
+          'https://smartauladi.sch.id/wp-content/uploads/no-image.jpg'
+        }
+        alt={article.title}
+        className="h-56 w-full object-cover rounded-t-lg shadow-md"
+      />
 
       <div className="flex-1 flex flex-col">
         <div className="flex-1 flex flex-col p-5">
@@ -28,7 +31,7 @@ const Article = ({ article }: Props) => {
           </footer>
         </div>
 
-        {/* Read More Button here... */}
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );
