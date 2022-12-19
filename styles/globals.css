@@ -8,6 +8,6 @@
   }
 
   .header-title {
-    @apply text-4xl font-serif capitalize px-10 pt-5 lg:pt-0
+    @apply text-3xl font-serif capitalize px-10 pt-5 lg:pt-0
   }
 }

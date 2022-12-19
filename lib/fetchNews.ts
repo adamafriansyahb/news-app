@@ -1,5 +1,6 @@
 import { gql } from 'graphql-request';
 import { sortNewsByImage } from './utils';
+import mockNewsResponse from '../mockNewsResponse.json';
 
 const fetchNews = async (
   category?: Category | string,
@@ -67,7 +68,7 @@ const fetchNews = async (
   const newsResponse = await res.json();
 
   // Sort function by images vs images present
-  const sortedNewsResponse = sortNewsByImage(newsResponse.data.newsArticles);
+  const sortedNewsResponse = sortNewsByImage(newsResponse.data.newsArticles || mockNewsResponse);
 
   return sortedNewsResponse;
 };
